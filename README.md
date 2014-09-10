@@ -13,8 +13,12 @@ The App
 ========  
 Still to be determined, go to my [first blog post](http://www.roysivan.com/lets-build-wordpress-app-together-one/#.VA4tHvmwLYh) to give input on what you want to build, or let me know if you like one of my ideas.
   
-__Plugin__ - [Collaborative Plugin Build](https://github.com/Build-WordPress-Application/wp-app-plugin)
-__Theme__ - [Collaborative Theme Build](https://github.com/Build-WordPress-Application/wp-app-theme)
+__Plugin__ - [Collaborative Plugin Build](https://github.com/Build-WordPress-Application/wp-app-plugin)  
+  
+  
+The Theme
+===========  
+The theme is built on [https://github.com/roots/roots](Roots.IO) theme, to get it running follow their instructions to install all necessary components
   
   
 Current Ideas
