@@ -26,9 +26,11 @@ Global Variable Definitions
 * __wpApp__ - Globally defined Angular App `var wpApp = angular.module('wpApp', ['ngRoute', 'ngResource']);`  
   
   
-Current Ideas
+What are we building?
 --------------
-* __Curated user submitted article directory__ - for intermediate / advanced WP and OOP programming
-* __Social color swatch site__
-* __A new WP theme__ - A new version for [My AngularJS WordPress theme](https://github.com/royboy789/Angular-Wordpress-Theme)
-* __ToDoMVC Clone for WP__ - A single backend and multiple themes with different types of front end libraries
+  
+In the works is a Social Style Guide sharing site (better name to come).  
+  
+The site is going to be based on the [SG-60](http://wordpress.org/plugins/sg-60-style-guide-creator) Style Guide Creator plugin, but with a full user system around it.  
+  
+For full specs check out [Part II](http://www.roysivan.com/lets-build-wordpress-app-together-part-ii/#.VBTKiWRdVH0) on my tutorial process of building a WordPress APP. - [Part II](http://www.roysivan.com/lets-build-wordpress-app-together-part-ii/#.VBTKiWRdVH0)
