@@ -30,6 +30,7 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'assets/js/*.js',
+        'assets/js/wp-app/**/*.js',
         '!assets/js/scripts.js',
         '!assets/**/*.min.*'
       ]
