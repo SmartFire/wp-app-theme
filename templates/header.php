@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-	      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" class="img-responsive" alt="Coding Office Hours" />
+	      SG Share
       </a>
     </div>
 
