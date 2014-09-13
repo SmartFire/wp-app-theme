@@ -22,8 +22,8 @@ The theme is built on [https://github.com/roots/roots](Roots.IO) theme, to get i
   
 Global Variable Definitions
 -----------------------------
-*__APIdata__ - Object containing `api_url` and `api_nonce` for use with WP-API
-*__wpApp__ - Globally defined Angular App `var wpApp = angular.module('wpApp', ['ngRoute', 'ngResource']);`  
+* __APIdata__ - Object containing `api_url` and `api_nonce` for use with WP-API
+* __wpApp__ - Globally defined Angular App `var wpApp = angular.module('wpApp', ['ngRoute', 'ngResource']);`  
   
   
 Current Ideas
