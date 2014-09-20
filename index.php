@@ -1,9 +1,12 @@
 <?php 
 $angular = new WPAPP_THEME();
-$angular->angularScripts();
+
 get_template_part('templates/page', 'header'); 
+
+$app = 'wpApp';
+
 ?>
 
-<div ng-app="wpApp">
+<div ng-app="<?php echo $app; ?>">
 	<ng-view></ng-view>
 </div>

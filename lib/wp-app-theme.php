@@ -4,12 +4,25 @@ class WPAPP_THEME {
 	
 	function __construct(){
 		add_action( 'wp_enqueue_scripts', array( $this, 'wpApp_baseScripts' ) );
-		
+		add_action( 'wp_enqueue_scripts', array( $this, 'angularScripts' ) );
 	}
 	
 	function wpApp_baseScripts() {
-		wp_enqueue_script( 'wpAppBaseJS', '/assets/js/wp-app/base.js', array( 'jquery' ), null, true );
-		wp_localize_script( 'wpAppBaseJS', 'APIdata', array( 'api_url' => json_url(), 'api_nonce' => wp_create_nonce( 'wp_json' ) ) );
+		// The App Script
+		wp_enqueue_script( 'wpApp', '/assets/js/wp-app/wp-app.js', array( 'AngularCore' ), null, true );
+		wp_localize_script( 'wpApp', 'APIdata', array( 'api_url' => esc_url_raw( get_json_url() ), 'api_nonce' => wp_create_nonce( 'wp_json' ), 'templateUrl' => get_bloginfo( 'template_directory' ) ) );
+		
+		// Misc Scripts
+		wp_enqueue_script( 'wpAppScripts', '/assets/js/wp-app/wp-app-scripts.js', array( 'jquery' ), null, true );
+		
+		// Routes
+		wp_enqueue_script( 'wpAppRoutes', '/assets/js/wp-app/wp-app-routes.js', array( 'wpApp' ), null, true );
+		
+		// Factories
+		wp_enqueue_script( 'wpAppFactories', '/assets/js/wp-app/wp-app-factories.js', array( 'wpApp' ), null, true );
+		
+		// Controllers - Signup
+		wp_enqueue_script( 'wpAppSignup', '/assets/js/wp-app/controllers/wp-app-signup.js', array( 'wpAppFactories' ), null, true );
 	}
 	
 	
@@ -33,15 +46,6 @@ class WPAPP_THEME {
 		wp_enqueue_script( 
 			'AngularRes', 
 			'//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js', 
-			array('AngularRoute'), 
-			null, 
-			false
-		);
-		
-		// App Definition & Route Config
-		wp_enqueue_script( 
-			'AngularApp', 
-			'/assets/js/wp-app/angular-app-routes.js', 
 			array('AngularRoute'), 
 			null, 
 			false
