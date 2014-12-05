@@ -9,20 +9,21 @@ class WPAPP_THEME {
 	
 	function wpApp_baseScripts() {
 		// The App Script
-		wp_enqueue_script( 'wpApp', '/assets/js/wp-app/wp-app.js', array( 'AngularCore' ), null, true );
+		wp_enqueue_script( 'wpApp', get_stylesheet_directory_uri() . '/assets/js/wp-app/wp-app.js', array( 'AngularCore' ), null, true );
 		wp_localize_script( 'wpApp', 'APIdata', array( 'api_url' => esc_url_raw( get_json_url() ), 'api_nonce' => wp_create_nonce( 'wp_json' ), 'templateUrl' => get_bloginfo( 'template_directory' ) ) );
 		
 		// Misc Scripts
-		wp_enqueue_script( 'wpAppScripts', '/assets/js/wp-app/wp-app-scripts.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'wpAppScripts', get_stylesheet_directory_uri() . '/assets/js/wp-app/wp-app-scripts.js', array( 'jquery' ), null, true );
 		
 		// Routes
-		wp_enqueue_script( 'wpAppRoutes', '/assets/js/wp-app/wp-app-routes.js', array( 'wpApp' ), null, true );
+		wp_enqueue_script( 'wpAppRoutes', get_stylesheet_directory_uri() . '/assets/js/wp-app/wp-app-routes.js', array( 'wpApp' ), null, true );
 		
 		// Factories
-		wp_enqueue_script( 'wpAppFactories', '/assets/js/wp-app/wp-app-factories.js', array( 'wpApp' ), null, true );
+		wp_enqueue_script( 'wpAppFactories', get_stylesheet_directory_uri() . '/assets/js/wp-app/wp-app-factories.js', array( 'wpApp' ), null, true );
 		
-		// Controllers - Signup
-		wp_enqueue_script( 'wpAppSignup', '/assets/js/wp-app/controllers/wp-app-signup.js', array( 'wpAppFactories' ), null, true );
+		// Controllers
+		wp_enqueue_script( 'wpAppSignup', get_stylesheet_directory_uri() . '/assets/js/wp-app/controllers/wp-app-signup.js', array( 'wpAppFactories' ), null, true );
+		wp_enqueue_script( 'wpAppStyleGuide', get_stylesheet_directory_uri() . '/assets/js/wp-app/controllers/wp-app-sg.js', array( 'wpAppFactories' ), null, true );
 	}
 	
 	

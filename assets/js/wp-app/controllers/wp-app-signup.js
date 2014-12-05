@@ -20,7 +20,7 @@ function SignUpCtrl( $rootScope, $scope, Users ){
 				});
 			}
 			
-		})
-	}
+		});
+	};
 
 }

@@ -18,7 +18,7 @@ __Plugin__ - [Collaborative Plugin Build](https://github.com/Build-WordPress-App
   
 The Theme
 ===========  
-The theme is built on [https://github.com/roots/roots](Roots.IO) theme, to get it running follow their instructions to install all necessary components
+The theme is built on [Roots.IO](https://github.com/roots/roots) theme, to get it running follow their instructions to install all necessary components
   
 Global Variable Definitions
 -----------------------------
