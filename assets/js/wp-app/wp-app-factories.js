@@ -1,11 +1,15 @@
 wpApp.factory('Users', function($resource) {
-	return $resource(APIdata.api_url + '/users/:id?_wp_json_nonce=' + APIdata.api_nonce, {
+	return $resource(APIdata.api_url + '/sg_users/:id?_wp_json_nonce=' + APIdata.api_nonce, {
 		id: '@id'
-	}, {
-		update: {
-			method: 'PUT'
+	}, 
+	{
+		DELETE : {
+			method: 'DELETE',
+			url: APIdata.api_url + '/users/:id?_wp_json_nonce=' + APIdata.api_nonce,
+			params: { id: '@id' }
 		}
 	});
+	
 });
 
 wpApp.factory('StyleGuides', function($resource) {

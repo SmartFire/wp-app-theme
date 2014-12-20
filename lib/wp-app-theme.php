@@ -32,21 +32,21 @@ class WPAPP_THEME {
 		// USING GOOGLE CDN
 		wp_enqueue_script( 
 			'AngularCore', 
-			'//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js', 
+			'//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js', 
 			array( 'jquery' ), 
 			null, 
 			false 
 		);
 		wp_enqueue_script( 
 			'AngularRoute', 
-			'//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.min.js', 
+			'//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js', 
 			array('AngularCore'), 
 			null, 
 			false
 		);
 		wp_enqueue_script( 
 			'AngularRes', 
-			'//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js', 
+			'//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-resource.min.js', 
 			array('AngularRoute'), 
 			null, 
 			false
